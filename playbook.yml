@@ -7,4 +7,4 @@
     - {role: bspwm, tags: [bspwm]}
     - {role: polybar, tags: [polybar]}
     - {role: zsh, tags: [zsh]}
-    - {role: 5-ranger, tags: [ranger]}
+    - {role: ranger, tags: [ranger]}
