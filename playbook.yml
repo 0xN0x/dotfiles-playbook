@@ -1,0 +1,10 @@
+---
+- name: "Configure OS"
+  hosts: localhost
+  connection: local
+  roles:
+    - {role: base, tags: [base]}
+    - {role: bspwm, tags: [bspwm]}
+    - {role: polybar, tags: [polybar]}
+    - {role: zsh, tags: [zsh]}
+    - {role: 5-ranger, tags: [ranger]}

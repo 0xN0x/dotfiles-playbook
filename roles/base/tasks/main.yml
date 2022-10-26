@@ -1,0 +1,13 @@
+---
+- name: Install packages (git)
+  pacman:
+    name: git
+    state: present
+
+- name: Get dotfiles
+  ansible.builtin.git:
+    repo: 'https://github.com/0xN0x/dotfiles.git'
+    dest: /opt/dotfiles
+    version: main
+
+- include: fonts.yml

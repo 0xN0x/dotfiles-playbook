@@ -1,0 +1,17 @@
+---
+- name: Install packages (bspwm, sxhkd)
+  pacman:
+    name: bspwm,sxhkd
+    state: present
+
+- name: Link bspwm configuration
+  ansible.builtin.file:
+    src: /opt/dotfiles/bspwm
+    dest: ~/.config/bspwm
+    state: link
+
+- name: Link sxhkd configuration
+  ansible.builtin.file:
+    src: /opt/dotfiles/sxhkd
+    dest: ~/.config/sxhkd
+    state: link

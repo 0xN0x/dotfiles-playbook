@@ -1,0 +1,11 @@
+---
+- name: Install packages (polybar)
+  pacman:
+    name: polybar
+    state: present
+
+- name: Configure
+  ansible.builtin.file:
+    src: /opt/dotfiles/polybar
+    dest: ~/.config/polybar
+    state: link

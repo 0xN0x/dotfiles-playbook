@@ -1,0 +1,5 @@
+---
+- name: Install fonts
+  pacman:
+    name: ttf-font-awesome,ttf-fira-code
+    state: present

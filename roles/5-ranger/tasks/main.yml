@@ -1,0 +1,11 @@
+---
+- name: Install packages (ranger)
+  pacman:
+    name: ranger
+    state: present
+
+- name: Configure
+  ansible.builtin.file:
+    src: /opt/dotfiles/ranger
+    dest: ~/.config/ranger
+    state: link

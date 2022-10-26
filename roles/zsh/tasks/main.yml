@@ -1,0 +1,19 @@
+---
+- name: Install packages (zsh)
+  pacman:
+    name: zsh
+    state: present
+
+- name: Configure zsh
+  ansible.builtin.file:
+    src: /opt/dotfiles/zsh/zshrc
+    dest: ~/.zshrc
+    state: link
+
+- name: Change user shell to zsh 
+  become: yes
+  user:
+    name: "{{ the_user }}"
+    shell: /bin/zsh
+
+- include: oh-my-zsh.yml
